@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Undangan Riyadi & Meisah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #fefaf1, #f8f1e4);
+      color: #5a3921;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fffdf6;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+      border: 8px double #a57e54;
+      position: relative;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      text-align: center;
+      color: #a57e54;
+    }
+    h2, h3 {
+      text-align: center;
+      font-weight: normal;
+    }
+    .section {
+      margin: 30px 0;
+    }
+    .map-link, .rekening-box {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .rekening-box {
+      background: #f3ece3;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #d5c3ae;
+      display: inline-block;
+    }
+    .footer {
+      text-align: center;
+      font-style: italic;
+      margin-top: 40px;
+      font-size: 0.95em;
+    }
+    .qr {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .qr img {
+      width: 120px;
+      height: 120px;
+    }
+    form {
+      text-align: center;
+      margin-top: 30px;
+    }
+    input, textarea {
+      padding: 10px;
+      margin: 8px 0;
+      width: 80%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #a57e54;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    audio {
+      display: none;
+    }
+    .countdown {
+      font-size: 1.2em;
+      text-align: center;
+      margin-top: 20px;
+      color: #a57e54;
+    }
+    .whatsapp-btn {
+      display: block;
+      margin: 30px auto;
+      text-align: center;
+    }
+    .whatsapp-btn a {
+      background-color: #25d366;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .music-control {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body onload="startCountdown()">
+  <audio id="bgMusic" autoplay loop>
+    <source src="assets/akad.mp3" type="audio/mpeg" />
+  </audio>
+
+  <div class="music-control">
+    <button onclick="toggleMusic()">⏯️ Musik</button>
+  </div>
+
+  <div class="container">
+    <h1>Riyadi & Meisah Putri</h1>
+
+    <div class="countdown" id="countdown"></div>
+
+    <div class="section">
+      <p style="text-align:center;">Dengan memohon rahmat dan ridho Allah SWT,<br/>
+      kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada:</p>
+
+      <h3>Minggu, 10 Agustus 2025</h3>
+      <p style="text-align:center;">Akad Nikah pukul <strong>11.00 WIB</strong><br/>
+      Gedung KUA<br/>
+      Jl. Budi Mulya No.52, Pademangan Barat</p>
+    </div>
+
+    <div class="section map-link">
+      <a href="https://maps.app.goo.gl/nytJD2bHcReheFa59" target="_blank"
+        style="font-weight:bold; font-size:1.1em; color:#5a3921;">
+        📍 Klik untuk lihat lokasi Google Maps
+      </a>
+      <div class="qr">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maps.app.goo.gl/nytJD2bHcReheFa59" alt="QR Code Lokasi">
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Hadiah Pernikahan</h3>
+      <p style="text-align:center;">Doa restu Anda merupakan karunia yang sangat berarti bagi kami.<br/>
+      Namun jika ingin memberi tanda kasih secara cashless, dapat melalui:</p>
+      <div class="rekening-box">
+        <strong>Nama:</strong> Riyadi<br/>
+        <strong>Bank:</strong> BCA<br/>
+        <strong>No. Rekening:</strong> 4870794865
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Konfirmasi Kehadiran</h3>
+      <form onsubmit="alert('Terima kasih atas konfirmasi Anda!'); return false;">
+        <input type="text" name="nama" placeholder="Nama Anda" required><br/>
+        <textarea name="pesan" placeholder="Ucapan atau doa..." rows="3"></textarea><br/>
+        <button type="submit">Kirim</button>
+      </form>
+    </div>
+
+    <div class="whatsapp-btn">
+      <a href="https://wa.me/6285281551567?text=Halo%20Riyadi%20dan%20Meisah%2C%20saya%20akan%20hadir%20di%20acara%20pernikahan%20kalian." target="_blank">💬 Kirim Ucapan via WhatsApp</a>
+    </div>
+
+    <div class="footer">
+      Terima kasih atas doa dan kehadiran Anda ❤️<br/>
+      Wassalamu’alaikum warahmatullahi wabarakatuh
+    </div>
+  </div>
+
+  <script>
+    function toggleMusic() {
+      var music = document.getElementById('bgMusic');
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+
+    function startCountdown() {
+      const countDate = new Date("August 10, 2025 11:00:00").getTime();
+      const timer = setInterval(function () {
+        const now = new Date().getTime();
+        const gap = countDate - now;
+        if (gap < 0) {
+          document.getElementById("countdown").innerText = "Selamat datang di hari bahagia kami!";
+          clearInterval(timer);
+          return;
+        }
+        const days = Math.floor(gap / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((gap % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerText = 
+          `Menuju hari H: ${days} hari ${hours} jam ${minutes} menit ${seconds} detik`;
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
